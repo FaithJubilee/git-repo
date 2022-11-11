@@ -1,4 +1,179 @@
-.home {
-    background-color: green;
-    text-align: center;
-}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 20px;
+  }
+  
+  button:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.25);
+    top: 100%;
+    width: 140%;
+    height: 180%;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+  }
+  
+  button:after {
+    content: "";
+    position: absolute;
+    left: 55%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.45);
+    top: 180%;
+    width: 160%;
+    height: 190%;
+    background-color: #39bda7;
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+  }
+  
+  button:hover {
+    color: #ffffff;
+    border: 1px solid #39bda7;
+  }
+  
+  button:hover:before {
+    top: -35%;
+    background-color: #39bda7;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+  }
+  
+  button:hover:after {
+    top: -45%;
+    background-color: #39bda7;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+  }
+  
+  nav {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  nav ul li {
+    display: inline-block;
+    padding: 20px;
+    cursor: pointer;
+  }
+  nav .user-profile {
+    width: 50px;
+    height: 50px;
+    border-radius: 360px;
+    border: 1px solid red;
+  }
+  
+  .landing-user {
+    border: 1px solid pink;
+    height: 80vh;
+    overflow: hidden;
+  }
+  .landing-user .user-profile {
+    width: 40%;
+    margin-top: 4em;
+    margin-left: 10em;
+  }
+  .landing-user .user-profile .user-pic {
+    width: 240px;
+    height: 240px;
+    border-radius: 360px;
+    border: 1px solid black;
+    margin: 10px 0;
+  }
+  .landing-user .user-profile .user-pic img {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    border-radius: 360px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 240px;
+    height: 240px;
+  }
+  .landing-user .user-profile .user-name {
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .landing-user .user-profile .user-username {
+    font-size: 23px;
+    margin-left: -16rem;
+    margin-bottom: 10px;
+  }
+  .landing-user .user-profile .user-bio {
+    font-size: 23px;
+  }
+  
+  .main {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    position: relative;
+    top: 10rem;
+    border: 1px solid gold;
+  }
+  
+  .user-wrapper {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .user-wrapper .user-profile {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .user-wrapper .user-profile .user-pic {
+    width: 20px;
+    height: 20px;
+    border-radius: 360px;
+    border: 1px solid black;
+    margin: 10px 0;
+  }
+  .user-wrapper .user-profile .user-name {
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .user-wrapper .user-profile .user-username {
+    font-size: 23px;
+    margin-left: -16rem;
+    margin-bottom: 10px;
+  }
+  .user-wrapper .user-profile .user-bio {
+    font-size: 23px;
+    margin-left: -1rem;
+  }
+  .user-wrapper .user-repo {
+    width: 40%;
+    height: 100%;
+    padding: 20px;
+    border: 1px solid #39bda7;
+    margin-top: 50px;
+    margin: 10px 0;
+  }
+  .user-wrapper .user-repo input {
+    width: 40%;
+    padding: 6px;
+    outline-color: blue;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }

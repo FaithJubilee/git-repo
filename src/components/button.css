@@ -11,6 +11,6 @@ button {
     top: 27rem;
     left: 50rem;
     z-index: 1;
-    background: none;
+    background: #39bda7;
     cursor: pointer;
   }
